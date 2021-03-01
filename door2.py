@@ -4,7 +4,7 @@ import random
 import time
 
 
-
+###Gsme Introduction lines
 def game_Introduction():
     print("Welcome to the door game!")
     time.sleep(2)
@@ -34,14 +34,14 @@ play_Again = 'yes'
 while play_Again == 'yes':
     
     n = 0
-    level = random.randint(1,5)
+    game_Play = random.randint(1,5)     ## no of Game play decided randomly
 
     
     while level > 0:
         wall_Count = level
         print('Total no. of wall in Your Game is: ' + str(wall_Count))
-        n = n+1
-        level = level-1
+        n = n+1                             ##wall count get increments by 1 each iteration
+        game_Play = game_Play-1             ##game_play get decrements by 1 each iteration
         time.sleep(2)
         print('you have reached infront of wall: ' + str(n))
         time.sleep(2)
@@ -63,7 +63,7 @@ while play_Again == 'yes':
         if doorUHave == door:
             
 
-            if level != 0:
+            if game_play != 0:
                 print('u choose the right door, now u have reached to the next Wall...')
             else:
                 print('Congratulations!!! U hAvE wOn ThE gAmE')
@@ -83,7 +83,7 @@ while play_Again == 'yes':
             break
 
         
-    play_Again = input('Do you want to play Again(yes or no): ')
+    play_Again = input('Do you want to play Again(yes or no): ')  ##user must type "yes" to paly again the game.
     time.sleep(3)
     print('#############################################')
     time.sleep(3)
